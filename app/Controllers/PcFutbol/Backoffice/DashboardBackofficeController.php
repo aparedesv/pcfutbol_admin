@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Controllers\PcFutbol;
+namespace App\Controllers\PcFutbol\Backoffice;
 
-class CiutatsController extends PcFutbolController
+class DashboardBackofficeController extends PcFutbolBackofficeController
 {
 
     public function index()

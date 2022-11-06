@@ -41,4 +41,9 @@ class Validation extends BaseConfig
     // --------------------------------------------------------------------
     // Rules
     // --------------------------------------------------------------------
+
+    public $login = [
+		'email' => 'required|max_length[255]|valid_email',
+		'password' => 'required|min_length[8]',
+	];
 }
