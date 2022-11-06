@@ -2,6 +2,8 @@
 
 namespace Config;
 
+use App\Controllers\PcFutbol\PcFutbolController;
+
 // Create a new instance of our RouteCollection class.
 $routes = Services::routes();
 
@@ -35,7 +37,9 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
+$routes->get('/', [PcFutbolController::class, 'index']);
+
+$routes->presenter('ciutats', ['controller' => 'PcFutbol\CiutatsController']);
 
 /*
  * --------------------------------------------------------------------
